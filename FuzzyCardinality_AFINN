@@ -55,11 +55,9 @@ for k in range(len(text)):
 #    print(negscore)
 
     if card_posscore>=card_negscore:
-#        posneg_list.append("pos")
-        num_list.append(1)
+        num_list.append(1)      # positive sentiment
     else:
-#        posneg_list.append("neg")
-        num_list.append(0)
+        num_list.append(0)      # negative sentiment
     
  
 count=0
