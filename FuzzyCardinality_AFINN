@@ -14,7 +14,6 @@ senti2=[]
 
 num_list=[]
 for k in range(len(text)):
-#for k in range(0,1):
 
     print(k)
     review=text[k].decode()
@@ -28,13 +27,11 @@ for k in range(len(text)):
      # compute sentiment scores (polarity) and labels
     sentiment_scores = [af.score(word) for word in words]
     sentiment_category = ['positive' if score > 0 
-                              else 'negative' if score < 0 
-                                  else 'neutral' 
+                              else 'negative'
                                       for score in sentiment_scores]
     
     positive=[]
     negative=[]
-    neutral=[]
     
     for score in sentiment_scores:
         if score>=0:
@@ -45,11 +42,11 @@ for k in range(len(text)):
 #    print(positive)
 #    print(negative)
             
-##    print("\n Positive Score for each  review :")
+##    print("\n Positive Fuzzy Cardinality for each  review :")
     card_posscore=sum(positive)   #add up all pos scores- fuzzy cardinality
 #    print(posscore)
 #
-##    print("\n  Negative Score for each  review :")
+##    print("\n  Negative Fuzzy Cardinality for each  review :")
     card_negscore=sum(negative)  #add up all neg scores- fuzzy cardinality
 #    print(negscore)
                 
