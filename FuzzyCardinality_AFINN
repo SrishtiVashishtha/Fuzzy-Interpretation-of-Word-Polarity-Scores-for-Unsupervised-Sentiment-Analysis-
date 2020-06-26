@@ -65,4 +65,4 @@ for j in range(len(text)):
     if num_list[j]==labels[j]:
         count=count+1
 acc=(count/len(text))*100
-print("Accuracy: "+str(acc)+"%")  # AFINN CARDINALITY
+print("Accuracy: "+str(acc)+"%")
